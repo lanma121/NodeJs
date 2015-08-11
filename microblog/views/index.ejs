@@ -1,0 +1,14 @@
+
+<% if (!user) { %>
+  <div class="hero-unit">
+    <h1>欢迎来到 microBlog</h1>
+    <p>microBlog 是基于nodejs的微博系统</p>
+    <p>
+      <a class="bnt bnt-primary bnt-large" href="/login">登录</a>
+      <a class="bnt bnt-large" href="/reg">立即注册</a>
+    </p>
+  </div>
+<% } else { %>
+<%- partial('say') %>
+<% } %>
+<%- partial('post',posts) %>
