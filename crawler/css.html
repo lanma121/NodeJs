@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+
+        .box1 {
+            background: black;
+            color: White;
+            height: 100px;
+            padding: 10px;
+            border: 20px solid Red;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">For static or absolutely relative</div>
+<div style="margin: auto;width: 400px;height: 400px;background: darkgray;">
+
+    <div style="width: 200px;height: 200px;border: 10px solid sienna; padding: 10px;margin: 10px;background: blue">
+        <div style="width: 100%;height: 100%;background: yellow;"></div>
+    </div>
+</div>
+<div id="clock"></div>
+<script>
+
+            var noww = new Date();
+            nyear = noww.getFullYear();
+            nmonth = noww.getMonth() + 1;
+            nwday = noww.getDay();
+            nday = noww.getDate();
+
+
+
+
+
+
+    function Draw(){
+//        NewTick();
+        s=nyear+'年'+nmonth+'月'+nday+'日 '+'星期'+cweekday(nwday)+' '+;
+        document.getElementById("clock").innerHTML=s;
+        setTimeout("Draw()",500);
+    }
+    Draw();
+</script>
+
+
+</body>
+</html>
